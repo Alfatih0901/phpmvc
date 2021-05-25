@@ -1,0 +1,13 @@
+{
+           "recommendations": [
+                      "hookyqr.beautify",
+                      "formulahendry.auto-rename-tag",
+                      "wcwhitehead.bootstrap-3-snippets",
+                      "thekalinga.bootstrap4-vscode",
+                      "pranaygp.vscode-css-peek",
+                      "dsznajder.es7-react-js-snippets",
+                      "zignd.html-css-class-completion",
+                      "ritwickdey.liveserver",
+                      "techer.open-in-browser"
+           ]
+}
