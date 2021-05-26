@@ -9,7 +9,7 @@
            <div class="row">
                       <div class="col-lg-6">
                                  <!-- Button trigger modal -->
-                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+                                 <button type="button" class="btn btn-primary tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
                                             Tambah Data Mahasiswa
                                  </button>
 
@@ -21,6 +21,7 @@
                                                        <li class="list-group-item">
                                                                   <?= $mhs['nama']; ?>
                                                                   <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-2" onclick="return confirm('Yakin?');">Hapus</a>
+                                                                  <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-warning float-right ml-2 tampilModalUbah" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $mhs['id']; ?>">Ubah</a>
                                                                   <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-2">Detail</a>
                                                        </li>
                                             <?php endforeach; ?>
@@ -37,12 +38,13 @@
            <div class="modal-dialog">
                       <div class="modal-content">
                                  <div class="modal-header">
-                                            <h5 class="modal-title" id="formModal">Form Tambah Data</h5>
+                                            <h5 class="modal-title" id="formModalLabel">Form Tambah Data</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                  </div>
                                  <div class="modal-body">
 
                                             <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+                                                       <input type="hidden" name="id" id="id">
                                                        <div class="form-group">
                                                                   <label for="nama">Nama</label>
                                                                   <input type="text" class="form-control" id="nama" name="nama">
